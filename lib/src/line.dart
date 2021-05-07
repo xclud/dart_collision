@@ -15,7 +15,7 @@ class Line {
     return a + (lineDir * d);
   }
 
-  double calculateSide(vm.Vector2 p) {
+  double distanceToPoint(vm.Vector2 p) {
     final d = (b.x - a.x) * (p.y - a.y) - (b.y - a.y) * (p.x - a.x);
 
     return d.sign * sqrt(d.abs());

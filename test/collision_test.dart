@@ -1,12 +1,20 @@
-// import 'package:flutter_test/flutter_test.dart';
+import 'package:test/test.dart';
 
-// import 'package:collision/collision.dart';
+import 'package:collision/collision.dart';
+import 'package:vector_math/vector_math_64.dart';
 
-// void main() {
-//   test('adds one to input values', () {
-//     final calculator = Calculator();
-//     expect(calculator.addOne(2), 3);
-//     expect(calculator.addOne(-7), -6);
-//     expect(calculator.addOne(0), 1);
-//   });
-// }
+void main() {
+  test('OBB', () {
+    final obb = Obb2(
+      center: Vector2(5, 5),
+      width: 10,
+      height: 10,
+      rotation: 45,
+    );
+
+    final baked = obb.bake();
+    final inner = baked.innerRectancle();
+
+    print(inner);
+  });
+}

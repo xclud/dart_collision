@@ -17,4 +17,14 @@ void main() {
 
     print(inner);
   });
+
+  test('Line Intersection', () {
+    final line1 = Line(Vector2(-1, -1), Vector2(1, 1));
+    final line2 = Line(Vector2(-1, 1), Vector2(1, -1));
+
+    final intersect = line1.intersect(line2);
+
+    expect(intersect!.x, 0);
+    expect(intersect.y, 0);
+  });
 }

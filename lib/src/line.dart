@@ -84,4 +84,9 @@ class Line {
 
   //   return (-1 * slope * x1 - y1) / slope;
   // }
+
+  @override
+  String toString() {
+    return '$a $b';
+  }
 }

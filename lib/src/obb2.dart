@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:collision/src/line.dart';
 import 'package:collision/src/rectangle.dart';
 import 'package:vector_math/vector_math_64.dart' as vm;
 
@@ -87,12 +88,8 @@ class BakedObb {
     required this.bottomRight,
   });
 
-  Rectangle innerRectancle() {
-    final x1 = max(topLeft.x, bottomLeft.x);
-    final y1 = max(topLeft.y, topRight.y);
-    final x2 = min(topRight.x, bottomRight.x);
-    final y2 = min(bottomLeft.y, bottomRight.y);
-
-    return Rectangle.fromLTRB(x1, y1, x2, y2);
-  }
+  Line get leftEdge => Line(bottomLeft, topLeft);
+  Line get topEdge => Line(topLeft, topRight);
+  Line get rightEdge => Line(topRight, bottomRight);
+  Line get bottomEdge => Line(bottomRight, bottomLeft);
 }

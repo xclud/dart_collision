@@ -219,11 +219,10 @@ class Rectangle {
   /// See also [Size.bottomRight].
   vm.Vector2 get bottomRight => vm.Vector2(right, bottom);
 
-  Line get leftEdge => Line(topLeft, bottomLeft);
-  Line get topEdge => Line(topRight, topLeft);
-
-  Line get rightEdge => Line(bottomRight, topRight);
-  Line get bottomEdge => Line(bottomLeft, bottomRight);
+  Line get leftEdge => Line(bottomLeft, topLeft);
+  Line get topEdge => Line(topLeft, topRight);
+  Line get rightEdge => Line(topRight, bottomRight);
+  Line get bottomEdge => Line(bottomRight, bottomLeft);
 
   /// Whether the point specified by the given offset (which is assumed to be
   /// relative to the origin) lies between the left and right and the top and

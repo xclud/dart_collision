@@ -35,4 +35,14 @@ void main() {
     expect(intersect!.x, 0);
     expect(intersect.y, 0);
   });
+
+  test('Line Segment Intersection', () {
+    final line1 = Line(Vector2(0, 0), Vector2(5, 5));
+    final line2 = Line(Vector2(0, 5), Vector2(5, 0));
+
+    final intersection = line1.intersectAsSegments(line2);
+
+    expect(intersection!.x, 2.5);
+    expect(intersection.y, 2.5);
+  });
 }

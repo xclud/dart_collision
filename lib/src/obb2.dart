@@ -1,6 +1,5 @@
 import 'dart:math';
 import 'package:collision/src/line.dart';
-import 'package:collision/src/rectangle.dart';
 import 'package:vector_math/vector_math_64.dart' as vm;
 
 class Obb2 {

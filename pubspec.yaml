@@ -1,6 +1,6 @@
 name: collision
 description: Collision Detection and 2D geometry library for Dart and/or Flutter.
-version: 0.0.2
+version: 0.0.3
 repository: https://github.com/xclud/dart_collision
 
 environment:
